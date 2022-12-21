@@ -10,7 +10,11 @@ export class ItemListComponent {
 
   constructor(){};
   ngOnInit():void{};
+updateDatabase = async() => {
+console.log("Placeholder for updating DB")
+}
 saveItem(adderText:string) {
+this.updateDatabase();
 this.itemList.push({
   dateCreated: new Date(),
   isCompleted: false,
@@ -18,5 +22,6 @@ this.itemList.push({
 
 })
 }
+
 
 }
