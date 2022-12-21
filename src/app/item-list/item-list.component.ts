@@ -11,7 +11,12 @@ export class ItemListComponent {
   constructor(){};
   ngOnInit():void{};
 saveItem(adderText:string) {
-console.log("Success! Value was: " + adderText)
+this.itemList.push({
+  dateCreated: new Date(),
+  isCompleted: false,
+  itemDescription: adderText,
+
+})
 }
 
 }
