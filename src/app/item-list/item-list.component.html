@@ -3,6 +3,7 @@
 <button id="save-button" (click)="saveItem(adder.value)">Save</button>
 <article *ngFor="let item of itemList">
     <div>
+        <div><input type="checkbox" [checked]= "item.isCompleted"/></div>
         <div>{{item.itemDescription}}</div>
         <div>{{item.dateCreated.toDateString()}}</div>
         <div>{{item.isCompleted ? item.dateCreated.toDateString() : ""}}</div>
