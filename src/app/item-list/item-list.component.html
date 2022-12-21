@@ -1,0 +1,10 @@
+<label for="item-adder">Add an item to the To-Do List!</label>
+<input id="item-adder" #adder placeholder="Ex: Clean the dishes"/>
+<button id="save-button" (click)="saveItem(adder.value)">Save</button>
+<article *ngFor="let item of itemList">
+    <div>
+        <div>{{item.itemDescription}}</div>
+        <div>{{item.dateCreated.toDateString()}}</div>
+        <div>{{item.isCompleted ? item.dateCreated.toDateString() : ""}}</div>
+    </div>
+</article>
