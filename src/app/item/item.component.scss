@@ -1,0 +1,10 @@
+.item-row{
+    display: table-row;
+    width: auto;
+}
+.item-cell{
+        float:left;/*fix for  buggy browsers*/
+        display:table-column;
+        width:200px;
+        background-color:#ccc;
+}

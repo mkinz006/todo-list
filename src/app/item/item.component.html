@@ -1,6 +1,6 @@
-<div>
-    <div><input type="checkbox" [checked]= "todoItem.isCompleted"/></div>
-    <div>{{todoItem.itemDescription}}</div>
-    <div>{{todoItem.dateCreated.toDateString()}}</div>
-    <div>{{todoItem.isCompleted ? todoItem.dateCreated.toDateString() : ""}}</div>
+<div class="item-row">
+    <div class="item-cell"><input type="checkbox" [checked]= "todoItem.isCompleted"/></div>
+    <div class="item-cell">{{todoItem.itemDescription}}</div>
+    <div class="item-cell">{{todoItem.dateCreated.toDateString()}}</div>
+    <div class="item-cell">{{todoItem.isCompleted ? todoItem.dateCreated.toDateString() : ""}}</div>
 </div>
