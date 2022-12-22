@@ -1,1 +1,6 @@
-<p>item works!</p>
+<div>
+    <div><input type="checkbox" [checked]= "todoItem.isCompleted"/></div>
+    <div>{{todoItem.itemDescription}}</div>
+    <div>{{todoItem.dateCreated.toDateString()}}</div>
+    <div>{{todoItem.isCompleted ? todoItem.dateCreated.toDateString() : ""}}</div>
+</div>
