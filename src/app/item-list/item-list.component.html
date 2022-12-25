@@ -1,6 +1,7 @@
 <label for="item-adder">Add an item to the To-Do List!</label>
 <input id="item-adder" #adder placeholder="Ex: Clean the dishes"/>
 <button id="save-button" (click)="saveItem(adder.value)">Save</button>
-<div class="div-table" *ngFor="let item of itemList">
+
+<article class="div-table" *ngFor="let item of itemList">
     <app-item [todoItem]="item"></app-item>
-</div>
+</article>
