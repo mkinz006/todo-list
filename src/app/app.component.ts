@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { TodoItem } from './todo-item';
+import SampleJson from '../assets/testdata.json';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +14,19 @@ export class AppComponent {
     {
       itemDescription: "Clean Toilet",
       isCompleted: false,
-      dateCreated: new Date(2022,12,1)
+      dateCreated: new Date(2022,11,1)
     },
     {
       itemDescription: "Clean room",
       isCompleted: true,
-      dateCreated: new Date(2022,12,1),
-      dateCompleted: new Date(2022,12,3)
+      dateCreated: new Date(2021,11,1),
+      dateCompleted: new Date(2021,11,3)
     }
   ];
+  ngOnInit(){
+    this.getData();
+  }
+  getData(){
+    console.log(SampleJson);
+  }
 }

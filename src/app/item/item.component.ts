@@ -10,4 +10,12 @@ import { TodoItem } from '../todo-item';
 export class ItemComponent {
   @Input() todoItem: TodoItem = {dateCreated : new Date(),isCompleted:false,itemDescription:''}
 
+  checkTask(){
+    this.todoItem.isCompleted = ! this.todoItem.isCompleted;
+    if(this.todoItem.isCompleted){
+      this.todoItem.dateCompleted = new Date();
+    }else{
+      this.todoItem.dateCompleted = undefined;
+    }
+  }
 }

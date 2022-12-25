@@ -1,10 +1,11 @@
-.item-row{
-    display: table-row;
-    width: auto;
+.item-description{
+    font-size: 24px;
+    margin: 10px;
 }
-.item-cell{
-        float:left;/*fix for  buggy browsers*/
-        display:table-column;
-        width:200px;
-        background-color:#ccc;
+.item-completed{
+    text-decoration: line-through;
+}
+.item-detail{
+    font-size: 17px;
+    margin: 10px 10px 10px 30px;
 }

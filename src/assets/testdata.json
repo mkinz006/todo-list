@@ -1,0 +1,13 @@
+[
+    {
+        "itemDescription":"Clean bathroom",
+        "isCompleted":true,
+        "dateCreated":"2022-06-11",
+        "dateCompleted":"2022-07-12"
+    },
+    {
+        "itemDescription":"Clean Kitcher",
+        "isCompleted":false,
+        "dateCreated":"2022-06-11"
+    }
+]

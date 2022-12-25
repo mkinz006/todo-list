@@ -1,6 +1,7 @@
-<div class="item-row">
-    <div class="item-cell"><input type="checkbox" [checked]= "todoItem.isCompleted"/></div>
-    <div class="item-cell">{{todoItem.itemDescription}}</div>
-    <div class="item-cell">{{todoItem.dateCreated.toDateString()}}</div>
-    <div class="item-cell">{{todoItem.isCompleted ? todoItem.dateCreated.toDateString() : ""}}</div>
+<div class="item">
+    <div [ngClass]="todoItem.isCompleted ? 'item-description item-completed' : 'item-description'">
+        <input type="checkbox" [checked]= "todoItem.isCompleted" (change)="checkTask()"/> {{todoItem.itemDescription}}
+    </div>
+    <div class="item-detail">Date Created: {{todoItem.dateCreated}}</div>
+    <div class="item-detail">{{todoItem.isCompleted ? "Date Completed: " + todoItem.dateCompleted : ""}}</div>
 </div>
