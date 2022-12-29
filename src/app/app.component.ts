@@ -10,23 +10,11 @@ import SampleJson from '../assets/testdata.json';
 export class AppComponent {
   title = 'todo-list';
 
-  todoItemList:TodoItem[] = [
-    {
-      itemDescription: "Clean Toilet",
-      isCompleted: false,
-      dateCreated: new Date(2022,11,1)
-    },
-    {
-      itemDescription: "Clean room",
-      isCompleted: true,
-      dateCreated: new Date(2021,11,1),
-      dateCompleted: new Date(2021,11,3)
-    }
-  ];
+  todoItemList:TodoItem[] = this.getData().map(x => new TodoItem(x));
   ngOnInit(){
     this.getData();
   }
   getData(){
-    console.log(SampleJson);
+    return SampleJson;
   }
 }
